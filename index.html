@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Harish Corporate Gifting</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Engraved watches, leather gifts and private chef dining for law firms, banks and leading companies in Singapore.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: one committed look. Midnight-ink bands alternate with cloud-white bands; vermilion has one job (action + CNY).
+   Giant condensed display type, grainy thermal gradient hero, blueprint grid for process, split-flap CNY countdown. */
+:root{
+  color-scheme:light;
+  --ink:oklch(20% 0.035 262);
+  --ink-2:oklch(25% 0.035 262);   /* raised surface: higher = lighter */
+  --ink-3:oklch(30% 0.035 262);
+  --cloud:oklch(98% 0.004 250);
+  --paper:oklch(95% 0.008 250);
+  --on-light:oklch(22% 0.03 262);
+  --muted-light:oklch(47% 0.02 262);
+  --on-dark:oklch(96% 0.006 250);
+  --muted-dark:oklch(76% 0.02 262);
+  --vermilion:oklch(64% 0.205 33);
+  --vermilion-deep:oklch(52% 0.19 30);
+  --gold:oklch(82% 0.11 80);
+  --line-l:oklch(0% 0 0 / 0.10);      /* alpha borders blend into any surface */
+  --line-d:oklch(100% 0 0 / 0.12);
+  --display:"Big Shoulders Display","Oswald","Arial Narrow",Impact,sans-serif;
+  --body:"Manrope","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --r:20px; --pad:8px;                /* concentric radius: inner = outer - padding */
+  --wrap:1140px;
+  --noise:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--cloud);color:var(--on-light);font-family:var(--body);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--vermilion);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{margin:0;text-wrap:balance}
+h2{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(2.6rem,6vw,4.4rem);line-height:.92;letter-spacing:.005em}
+h3{font-size:1.12rem;font-weight:700;line-height:1.3}
+p{margin:0}
+.eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--vermilion)}
+section{padding-block:clamp(64px,9vw,112px)}
+.sec-head{display:grid;gap:16px;margin-bottom:44px;max-width:760px}
+.lede{font-size:1.08rem;max-width:58ch}
+.dark{background:var(--ink);color:var(--on-dark)}
+.dark .lede,.dark .muted{color:var(--muted-dark)}
+.light .lede,.light .muted{color:var(--muted-light)}
+.paper{background:var(--paper)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--vermilion);color:#fff;text-decoration:none;padding:14px 24px;border-radius:999px;font-weight:700;font-size:.92rem;border:0;cursor:pointer;font-family:var(--body);transition:background .2s}
+.btn:hover{background:var(--vermilion-deep)}
+.btn.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 1px currentColor}
+.btn.ghost:hover{background:oklch(100% 0 0 / .08)}
+
+/* header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--ink)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:oklch(20% 0.035 262 / .86);backdrop-filter:blur(12px);color:var(--on-dark);border-bottom:1px solid var(--line-d)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
+.brand{font-family:var(--display);font-weight:800;font-size:1.5rem;text-transform:uppercase;letter-spacing:.02em;text-decoration:none;white-space:nowrap}
+.brand span{color:var(--vermilion)}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-size:.9rem}
+.nav ul a{text-decoration:none;color:var(--muted-dark)}
+.nav ul a:hover{color:var(--on-dark)}
+.nav .btn{padding:10px 18px}
+@media (max-width:860px){.nav ul{display:none}}
+@media (max-width:420px){.nav .btn{display:none}}
+
+/* hero: grainy thermal gradient */
+.hero{position:relative;overflow:hidden;min-height:min(720px,88dvh);display:grid;align-items:center;padding-block:72px}
+.hero::before{content:"";position:absolute;inset:-20%;background:
+  radial-gradient(40% 50% at 78% 40%,oklch(64% 0.205 33 / .85),transparent 70%),
+  radial-gradient(30% 35% at 88% 75%,oklch(82% 0.11 80 / .55),transparent 70%),
+  radial-gradient(45% 60% at 15% 110%,oklch(45% 0.12 262 / .9),transparent 70%);
+  filter:blur(30px);animation:drift 18s ease-in-out infinite alternate}
+.hero::after{content:"";position:absolute;inset:0;background-image:var(--noise);opacity:.22;mix-blend-mode:overlay;pointer-events:none}
+@keyframes drift{to{transform:translate3d(-4%,3%,0) scale(1.06)}}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+.hero h1{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(3.6rem,10vw,8.4rem);line-height:.86;letter-spacing:-.005em;margin-top:18px}
+.hero h1 .w{display:inline-block;animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero h1 .w:nth-child(2){animation-delay:.08s}.hero h1 .w:nth-child(3){animation-delay:.16s}.hero h1 .w:nth-child(4){animation-delay:.24s}.hero h1 .w:nth-child(5){animation-delay:.32s}
+.hero h1 .accent{color:var(--vermilion)}
+@keyframes rise{from{transform:translateY(.35em);opacity:.15}to{transform:none;opacity:1}}
+.hero .lede{margin-top:26px;color:var(--muted-dark)}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.dial{width:100%;max-width:400px;justify-self:center;aspect-ratio:1}
+.dial svg{width:100%;height:100%;display:block;overflow:visible}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}.dial{max-width:280px;order:-1;justify-self:start}}
+
+/* masked marquee */
+.marquee{background:var(--vermilion);color:#fff;overflow:hidden;padding-block:14px;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.marquee-track{display:flex;gap:40px;width:max-content;animation:slide 38s linear infinite;font-family:var(--display);font-weight:700;font-size:1.5rem;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+.marquee-track span::after{content:"✦";margin-left:40px;color:var(--gold)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* cards with concentric radius + alpha borders + matched icon weight */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:#fff;border:1px solid var(--line-l);border-radius:var(--r);padding:var(--pad);display:grid;gap:0;align-content:start}
+.card .ic{border-radius:calc(var(--r) - var(--pad));background:var(--paper);aspect-ratio:16/9;display:grid;place-items:center;color:var(--on-light)}
+.card .ic svg{width:34px;height:34px;stroke:currentColor;stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.card .tx{padding:18px 14px 16px;display:grid;gap:8px}
+.card p{color:var(--muted-light);font-size:.95rem}
+@media (max-width:980px){.cards{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.cards{grid-template-columns:1fr}}
+
+/* collections */
+.coll{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.coll .card{background:var(--cloud)}
+.coll .ic{aspect-ratio:4/3;background:var(--ink);color:var(--gold);position:relative;overflow:hidden}
+.coll .ic::before{content:"";position:absolute;inset:0;background-image:repeating-radial-gradient(circle at 50% 50%,transparent 0 13px,oklch(100% 0 0 / .06) 13px 14px)}
+.coll .ic svg{width:56px;height:56px;position:relative}
+.price{display:flex;justify-content:space-between;gap:12px;align-items:baseline;border-top:1px solid var(--line-l);padding-top:12px;margin-top:6px;font-size:.88rem}
+.price small{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted-light)}
+.note{margin-top:20px;font-size:.86rem}
+@media (max-width:900px){.coll{grid-template-columns:1fr}}
+
+/* process on blueprint grid */
+.blueprint{background-color:var(--ink);background-image:
+  linear-gradient(oklch(100% 0 0 / .05) 1px,transparent 1px),linear-gradient(90deg,oklch(100% 0 0 / .05) 1px,transparent 1px),
+  linear-gradient(oklch(100% 0 0 / .025) 1px,transparent 1px),linear-gradient(90deg,oklch(100% 0 0 / .025) 1px,transparent 1px);
+  background-size:96px 96px,96px 96px,24px 24px,24px 24px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{background:var(--ink-2);border:1px solid var(--line-d);border-radius:var(--r);padding:24px;display:grid;gap:10px;align-content:start}
+.steps li::before{counter-increment:s;content:"0" counter(s);font-family:var(--display);font-weight:800;font-size:3rem;line-height:1;color:var(--vermilion)}
+.steps p{color:var(--muted-dark);font-size:.95rem}
+@media (max-width:980px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.steps{grid-template-columns:1fr}}
+
+/* CNY */
+.cny{background:var(--vermilion);color:#fff;position:relative;overflow:hidden}
+.cny::after{content:"";position:absolute;inset:0;background-image:var(--noise);opacity:.18;mix-blend-mode:overlay;pointer-events:none}
+.cny .wrap{position:relative;z-index:1}
+.cny .eyebrow{color:oklch(100% 0 0 / .85)}
+.cny-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
+.cny p.lede{color:oklch(100% 0 0 / .9);margin-top:18px}
+.board{background:var(--ink);border-radius:var(--r);padding:var(--pad);margin-top:28px;display:inline-block;max-width:100%}
+.board-in{border-radius:calc(var(--r) - var(--pad));border:1px solid var(--line-d);padding:16px 18px;display:grid;gap:12px}
+.board-head{display:flex;justify-content:space-between;gap:20px;font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+.flaps{display:flex;gap:6px;flex-wrap:wrap}
+.flap{position:relative;width:52px;height:68px;background:var(--ink-3);border-radius:6px;display:grid;place-items:center;font-family:var(--mono);font-size:2.2rem;color:var(--on-dark);overflow:hidden}
+.flap::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:oklch(0% 0 0 / .55)}
+.flap.sm{width:34px;height:48px;font-size:1.3rem}
+.flap.flip{animation:flip .09s linear}
+@keyframes flip{50%{transform:scaleY(.6);filter:brightness(.7)}}
+.board-row{display:flex;gap:6px;flex-wrap:wrap}
+.timeline{display:grid;font-variant-numeric:tabular-nums}
+.timeline div{display:grid;grid-template-columns:130px 1fr;gap:16px;padding-block:15px;border-bottom:1px solid oklch(100% 0 0 / .28)}
+.timeline div:first-child{border-top:1px solid oklch(100% 0 0 / .28)}
+.timeline b{font-family:var(--mono);font-weight:500;font-size:.88rem}
+.cny .btn{background:#fff;color:var(--vermilion-deep);margin-top:28px}
+.cny .btn:hover{background:var(--cloud)}
+@media (max-width:860px){.cny-grid{grid-template-columns:1fr;gap:36px}.timeline div{grid-template-columns:110px 1fr}.flap{width:44px;height:58px;font-size:1.8rem}}
+.xmas{margin-top:20px;background:var(--ink);color:var(--on-dark);border-radius:var(--r);padding:28px 32px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;position:relative;z-index:1}
+.xmas p{color:var(--muted-dark);margin-top:6px}
+@media (max-width:700px){.xmas{grid-template-columns:1fr;padding:24px}}
+
+/* why */
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.why div{display:grid;gap:10px;align-content:start;border-top:2px solid var(--on-light);padding-top:18px}
+@media (max-width:860px){.why{grid-template-columns:1fr;gap:28px}}
+
+/* faq */
+details{border-bottom:1px solid var(--line-l);padding-block:20px}
+details:first-of-type{border-top:1px solid var(--line-l)}
+summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--vermilion);font-size:1.4rem;line-height:1;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin-top:10px;max-width:68ch}
+
+/* contact: dark mode depth */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px}
+.contact-info{display:grid;gap:18px;align-content:start}
+.email-box{background:var(--ink-2);border:1px solid var(--line-d);border-radius:var(--r);padding:var(--pad);display:flex;align-items:center;gap:10px;flex-wrap:wrap;max-width:100%}
+.email-box code{font-family:var(--mono);font-size:1rem;padding-left:12px;word-break:break-all;user-select:all;min-width:0}
+.copy{margin-left:auto;position:relative;background:var(--ink-3);color:var(--on-dark);border:1px solid var(--line-d);border-radius:calc(var(--r) - var(--pad));padding:9px 16px;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer;min-width:90px;display:grid}
+.copy span{grid-area:1/1;transition:opacity .25s,filter .25s,transform .25s}
+.copy .b{opacity:0;filter:blur(4px);transform:scale(.9)}
+.copy.done .a{opacity:0;filter:blur(4px);transform:scale(.9)}
+.copy.done .b{opacity:1;filter:none;transform:none}
+form{background:var(--ink-2);border:1px solid var(--line-d);border-radius:var(--r);padding:clamp(22px,4vw,34px);display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.f{display:grid;gap:6px;min-width:0}
+.f.full{grid-column:1/-1}
+label{font-size:.78rem;font-weight:600;letter-spacing:.04em;color:var(--muted-dark)}
+input,select,textarea{width:100%;font:inherit;font-size:.95rem;color:var(--on-dark);background:var(--ink-3);border:1px solid var(--line-d);padding:12px 14px;border-radius:calc(var(--r) - 10px)}
+select{color-scheme:dark}
+input::placeholder,textarea::placeholder{color:oklch(70% 0.02 262)}
+textarea{min-height:110px;resize:vertical}
+.form-foot{grid-column:1/-1;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.form-msg{font-size:.88rem;color:var(--muted-dark)}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr;gap:36px}}
+@media (max-width:520px){form{grid-template-columns:1fr}}
+
+footer{background:var(--ink);color:var(--muted-dark);border-top:1px solid var(--line-d);padding-block:28px;font-size:.85rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">Harish<span>,</span> Corporate Gifting</a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#collections">Collections</a></li>
+      <li><a href="#process">How it works</a></li>
+      <li><a href="#cny">CNY 2027</a></li>
+    </ul>
+    <a class="btn" href="#contact">Get a proposal</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero dark">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Corporate gifting · Singapore</p>
+        <h1><span class="w">Gifts</span> <span class="w">that</span> <span class="w">carry</span> <span class="w accent">your</span> <span class="w accent">name.</span></h1>
+        <p class="lede">Engraved timepieces, fine leather and private chef dining for law firms, banks and leading companies. One point of contact and one invoice, from brief to doorstep.</p>
+        <div class="ctas">
+          <a class="btn" href="#contact">Get a proposal</a>
+          <a class="btn ghost" href="#cny">Plan for CNY 2027</a>
+        </div>
+      </div>
+      <div class="dial" aria-hidden="true">
+        <svg viewBox="0 0 400 400">
+          <defs><path id="ring" d="M200,200 m-128,0 a128,128 0 1,1 256,0 a128,128 0 1,1 -256,0"/></defs>
+          <circle cx="200" cy="200" r="186" fill="none" stroke="oklch(100% 0 0 / .18)" stroke-width="1.5"/>
+          <circle cx="200" cy="200" r="172" fill="oklch(25% 0.035 262 / .55)" stroke="oklch(100% 0 0 / .14)" stroke-width="1"/>
+          <g id="ticks"></g>
+          <text font-family="IBM Plex Mono, monospace" font-size="10.5" letter-spacing="3.2" fill="oklch(82% 0.11 80)"><textPath href="#ring">ENGRAVED FOR YOUR FIRM · WITH THANKS · SINGAPORE MMXXVII ·</textPath></text>
+          <text x="200" y="150" text-anchor="middle" font-family="Big Shoulders Display, Impact, sans-serif" font-weight="800" font-size="26" letter-spacing="2" fill="oklch(96% 0.006 250)">HARISH</text>
+          <text x="200" y="168" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8.5" letter-spacing="3" fill="oklch(76% 0.02 262)">SINGAPORE</text>
+          <line id="hh" x1="200" y1="200" x2="200" y2="120" stroke="oklch(96% 0.006 250)" stroke-width="5" stroke-linecap="round" transform="rotate(300 200 200)"/>
+          <line id="mm" x1="200" y1="200" x2="200" y2="82" stroke="oklch(96% 0.006 250)" stroke-width="3" stroke-linecap="round" transform="rotate(60 200 200)"/>
+          <line id="ss" x1="200" y1="222" x2="200" y2="70" stroke="oklch(64% 0.205 33)" stroke-width="1.5" stroke-linecap="round" transform="rotate(180 200 200)"/>
+          <circle cx="200" cy="200" r="5" fill="oklch(64% 0.205 33)"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Partner promotions</span><span>Deal closings</span><span>Client dinners</span><span>Long-service awards</span><span>Chinese New Year</span><span>Christmas</span><span>Board retirements</span>
+      <span>Partner promotions</span><span>Deal closings</span><span>Client dinners</span><span>Long-service awards</span><span>Chinese New Year</span><span>Christmas</span><span>Board retirements</span>
+    </div>
+  </div>
+
+  <section class="light" id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Services</p>
+        <h2>What we handle for you</h2>
+      </div>
+      <div class="cards">
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M20 12v9H4v-9"/><path d="M2 7h20v5H2z"/><path d="M12 21V7"/><path d="M12 7H7.5a2.5 2.5 0 1 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 1 0 0-5C13 2 12 7 12 7z"/></svg></div><div class="tx"><h3>Client and partner gifts</h3><p>Engraved pieces for key clients and referral partners, matched to the relationship and your gifting policy.</p></div></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 15h2M14 15h2"/></svg></div><div class="tx"><h3>Festive gifting</h3><p>Christmas and Chinese New Year gifts, planned ahead so engraving and delivery dates are secured.</p></div></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M8.2 13 7 22l5-3 5 3-1.2-9"/></svg></div><div class="tx"><h3>Staff recognition</h3><p>Milestone, long-service and partner-promotion gifts, plus team dinners after deal closings.</p></div></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2V2"/><path d="M6 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg></div><div class="tx"><h3>Private chef dining</h3><p>A chef cooks and serves a multi-course meal at your office or a client's home.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="paper light" id="collections">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Collections</p>
+        <h2>Three things, done properly</h2>
+        <p class="lede">Every proposal is built around your budget and headcount. Final pricing comes in a written quote.</p>
+      </div>
+      <div class="coll">
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="6"/><path d="M12 9v3l1.5 1.5"/><path d="m16.5 7.5-.8-4.2A2 2 0 0 0 13.7 2h-3.4a2 2 0 0 0-2 1.3l-.8 4.2M7.5 16.5l.8 4.2a2 2 0 0 0 2 1.3h3.4a2 2 0 0 0 2-1.3l.8-4.2"/></svg></div><div class="tx"><h3>Engraved timepieces</h3><p>Watches and desk clocks engraved on the caseback or plaque with a name, a date, or your firm's mark. Boxed with a personal card.</p><div class="price"><small>Pricing</small><span>Quoted per piece</span></div></div></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M2 13h20"/><path d="M11 13v2h2v-2"/></svg></div><div class="tx"><h3>Leather and corporate gifts</h3><p>Folios, card holders, wallets, desk sets and pens, embossed or engraved with initials or your logo.</p><div class="price"><small>Pricing</small><span>Quoted per recipient</span></div></div></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 13.9A4 4 0 0 1 7 6a5 5 0 0 1 10 0 4 4 0 0 1 1 7.9V21H6z"/><path d="M6 17h12"/></svg></div><div class="tx"><h3>Private chef dining</h3><p>A chef plans, cooks and serves a multi-course menu at your office or a client's home. For client dinners, partner lunches and celebrations.</p><div class="price"><small>Pricing</small><span>Per guest · from 13 guests</span></div></div></div>
+      </div>
+      <p class="note muted">Prices exclude GST.</p>
+    </div>
+  </section>
+
+  <section class="blueprint dark" id="process">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">How it works</p>
+        <h2>From brief to doorstep</h2>
+      </div>
+      <ol class="steps">
+        <li><h3>Brief</h3><p>A short call on recipients, budget per head, timing and any limits on gift value.</p></li>
+        <li><h3>Proposal</h3><p>You receive two or three options with a fixed price per recipient or guest.</p></li>
+        <li><h3>Confirm</h3><p>Pick your option, send the engraving text or menu choice, and pay one invoice.</p></li>
+        <li><h3>Delivery</h3><p>Gifts arrive with your card, or the chef arrives on the day. Nothing else for you to manage.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="cny" id="cny">
+    <div class="wrap">
+      <div class="cny-grid">
+        <div>
+          <p class="eyebrow">Chinese New Year 2027 · Year of the Goat</p>
+          <h2 style="margin-top:14px">CNY falls on Saturday, 6 February 2027.</h2>
+          <p class="lede">Most firms send client gifts and host reunion lunches in the weeks before. Engraving and chef bookings fill up, so the earlier you order, the more choice you have.</p>
+          <div class="board" aria-label="Days until Chinese New Year">
+            <div class="board-in">
+              <div class="board-head"><span>Departures · CNY 2027</span><span id="board-date">06 FEB</span></div>
+              <div class="board-row" id="days" aria-live="off"></div>
+              <div class="board-row" id="label"></div>
+            </div>
+          </div>
+          <div><a class="btn" href="#contact">Reserve CNY dates</a></div>
+        </div>
+        <div class="timeline">
+          <div><b>Enquire</b><span>Share your occasion, headcount and budget</span></div>
+          <div><b>Choose</b><span>Pick gifts, engraving text or a menu</span></div>
+          <div><b>Confirm</b><span>Pay one invoice and we take it from there</span></div>
+          <div><b>Receive</b><span>Gifts delivered, or the chef arrives, ahead of CNY</span></div>
+        </div>
+      </div>
+      <div class="xmas">
+        <div><h3>Christmas and year-end, at short notice</h3><p>Still need client gifts or a team dinner before Christmas? Enquire as early as you can and we will tell you what can still arrive in time.</p></div>
+        <a class="btn" href="#contact">Ask about Christmas</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="light" id="why">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Why firms work with us</p>
+        <h2>Less admin for your team</h2>
+      </div>
+      <div class="why">
+        <div><h3>One contact, one invoice</h3><p class="muted">We coordinate every maker, engraver, chef and courier. Your finance team pays a single vendor.</p></div>
+        <div><h3>Compliance-aware</h3><p class="muted">We work within your gifting policy and value caps, and supply itemised invoices for audit.</p></div>
+        <div><h3>Discreet and on brand</h3><p class="muted">Personalised cards, engraving and packaging in your colours. Recipient lists stay confidential.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="paper light">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Questions</p>
+        <h2>Before you enquire</h2>
+      </div>
+      <details><summary>Is there a minimum order?</summary><p class="muted">Gift orders usually start at 10 recipients. Private chef dining starts at 13 guests.</p></details>
+      <details><summary>How do payment and invoicing work?</summary><p class="muted">You pay one itemised invoice when you confirm your order, covering the gifts, engraving and delivery. Bank transfer and PayNow are accepted.</p></details>
+      <details><summary>How much notice do you need?</summary><p class="muted">It depends on the item and the season. Tell us your date when you enquire and we will confirm what is possible. Festive periods book up, so earlier is better.</p></details>
+      <details><summary>Can you deliver to individual home addresses?</summary><p class="muted">Yes. Send a recipient list and we handle addressing, cards and delivery.</p></details>
+    </div>
+  </section>
+
+  <section class="dark" id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-info">
+        <p class="eyebrow">Contact</p>
+        <h2>Get a proposal</h2>
+        <p class="lede">Tell us about the occasion. Harish will get back to you with options.</p>
+        <div class="email-box"><code id="email-text">Harish3506@gmail.com</code><button class="copy" id="copy-btn" type="button"><span class="a">Copy</span><span class="b">Copied</span></button></div>
+      </div>
+      <form id="enquiry" novalidate>
+        <div class="f"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div class="f"><label for="f-company">Company</label><input id="f-company" name="company" autocomplete="organization" required></div>
+        <div class="f"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="f"><label for="f-occasion">Occasion</label>
+          <select id="f-occasion" name="occasion">
+            <option>Chinese New Year 2027</option>
+            <option>Christmas 2026</option>
+            <option>Engraved watch</option>
+            <option>Leather or corporate gift</option>
+            <option>Private chef dining</option>
+            <option>Other</option>
+          </select></div>
+        <div class="f"><label for="f-count">Recipients or guests</label><input id="f-count" name="count" inputmode="numeric" placeholder="e.g. 40"></div>
+        <div class="f"><label for="f-budget">Budget per recipient (S$)</label><input id="f-budget" name="budget" placeholder="e.g. 200 to 300"></div>
+        <div class="f full"><label for="f-notes">Anything else</label><textarea id="f-notes" name="notes" placeholder="Timing, preferences, gifting policy limits"></textarea></div>
+        <div class="form-foot"><button class="btn" type="submit">Send enquiry</button><span class="form-msg" id="form-msg" role="status"></span></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>© 2026 Harish, Corporate Gifting · Singapore</span><span>Engraved gifts and private chef dining</span></div>
+</footer>
+
+<script>
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* watch dial: ticks + live Singapore time */
+  var ticks=document.getElementById('ticks'),ns='http://www.w3.org/2000/svg';
+  for(var i=0;i<60;i++){var l=document.createElementNS(ns,'line'),big=i%5===0;
+    l.setAttribute('x1',200);l.setAttribute('x2',200);l.setAttribute('y1',big?36:40);l.setAttribute('y2',48);
+    l.setAttribute('stroke',big?'oklch(96% 0.006 250)':'oklch(100% 0 0 / .35)');l.setAttribute('stroke-width',big?2.5:1);
+    l.setAttribute('transform','rotate('+(i*6)+' 200 200)');ticks.appendChild(l)}
+  function tick(){var d=new Date(Date.now()+8*3600e3),s=d.getUTCSeconds()+d.getUTCMilliseconds()/1000,m=d.getUTCMinutes()+s/60,h=(d.getUTCHours()%12)+m/60;
+    document.getElementById('ss').setAttribute('transform','rotate('+(s*6)+' 200 200)');
+    document.getElementById('mm').setAttribute('transform','rotate('+(m*6)+' 200 200)');
+    document.getElementById('hh').setAttribute('transform','rotate('+(h*30)+' 200 200)');
+    if(!reduce)requestAnimationFrame(tick)}
+  tick();if(reduce)setInterval(tick,1000);
+
+  /* split-flap countdown to CNY (6 Feb 2027, Singapore) */
+  var target=Date.UTC(2027,1,5,16,0,0),now=Date.now();
+  var days=Math.max(0,Math.ceil((target-now)/864e5));
+  var txt=String(days).padStart(3,'0'),word=days===0?'TODAY':'DAYS TO GO';
+  var chars='0123456789',letters='ABCDEFGHIJKLMNOPRSTUVWY';
+  function build(id,str,cls){var el=document.getElementById(id);el.innerHTML='';return str.split('').map(function(c){var f=document.createElement('div');f.className='flap'+(cls?' '+cls:'');f.textContent=c===' '?' ':c;el.appendChild(f);return f})}
+  var dF=build('days',txt),lF=build('label',word,'sm');
+  function shuffle(flaps,str,pool,delay){if(reduce)return;flaps.forEach(function(f,i){var c=str[i];if(c===' ')return;var n=6+i*2+Math.floor(Math.random()*4),k=0;
+    setTimeout(function step(){if(k++<n){f.textContent=pool[Math.floor(Math.random()*pool.length)];f.classList.remove('flip');void f.offsetWidth;f.classList.add('flip');setTimeout(step,70)}else{f.textContent=c}},delay)})}
+  var played=false,board=document.querySelector('.board');
+  function play(){if(played)return;played=true;shuffle(dF,txt,chars,0);shuffle(lF,word,letters,150)}
+  if('IntersectionObserver' in window){new IntersectionObserver(function(e){if(e[0].isIntersecting)play()},{threshold:.4}).observe(board)}
+
+  /* copy with blurred swap */
+  var email=document.getElementById('email-text').textContent.trim(),btn=document.getElementById('copy-btn');
+  btn.addEventListener('click',function(){
+    var done=function(){btn.classList.add('done');setTimeout(function(){btn.classList.remove('done')},1800)};
+    var fallback=function(){var r=document.createRange();r.selectNodeContents(document.getElementById('email-text'));var s=getSelection();s.removeAllRanges();s.addRange(r)};
+    try{navigator.clipboard.writeText(email).then(done,fallback)}catch(e){fallback()}
+  });
+
+  /* enquiry form opens the visitor's email app */
+  var form=document.getElementById('enquiry'),msg=document.getElementById('form-msg');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=function(id){return document.getElementById(id).value.trim()};
+    if(!v('f-name')||!v('f-company')||!/\S+@\S+\.\S+/.test(v('f-email'))){msg.textContent='Please add your name, company and a valid work email.';return}
+    var body='Name: '+v('f-name')+'\nCompany: '+v('f-company')+'\nEmail: '+v('f-email')+'\nOccasion: '+v('f-occasion')+'\nRecipients: '+v('f-count')+'\nBudget per recipient: S$'+v('f-budget')+'\n\n'+v('f-notes');
+    window.location.href='mailto:'+email+'?subject='+encodeURIComponent('Gifting enquiry: '+v('f-company'))+'&body='+encodeURIComponent(body);
+    msg.textContent='Your email app should open with the enquiry filled in. If it does not, email '+email+'.';
+  });
+})();
+</script>
+</body>
+</html>
